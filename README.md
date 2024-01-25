@@ -26,9 +26,9 @@ docker pull ubuntu:jammy-20230301
 
 ### 1 - [What are containers ? Is it an image ? What do they do ? (10 min)](docs/1-containers-images.md)
 
-### 2 - [Creating my first image recipe (2min)](docs/234-first-image.md)
+### 2 - [Creating my first image recipe (2min)](docs/2-3-4-first-image.md)
 
-### 3 - [Building my first image (3 min)](docs/234-first-image.md)
+### 3 - [Building my first image (3 min)](docs/2-3-4-first-image.md)
 
 ### 4 - [Running my first container (5 min)](docs/2-3-4-first-image.md)
 

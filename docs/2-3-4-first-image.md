@@ -28,6 +28,8 @@ We will create a simple image that will run a python script. We will use the `al
     python3 /print_infos_inside_container.py
     ```
 
+4. (Linux and MacOS) Open a terminal and make the entrypoint executable with `chmod +x my-first-image/entrypoint.sh`
+
 4. Copy the file `print_infos_inside_container.py` from the `resources` folder to the `my-first-image` folder.
 
 5. Add the following line to the dockerfile to copy the python script to the image :
@@ -41,7 +43,7 @@ We will create a simple image that will run a python script. We will use the `al
 1. Open the terminal in VS Code and build the image :
 
     ```bash
-    docker build -t my-first-image .
+    docker build -t my-first-image my-first-image/
     ```
 
 2. Run docker with the image, through the entrypoint :

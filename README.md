@@ -24,14 +24,14 @@ docker pull ubuntu:jammy-20230301
 
 ## Workshop
 
-### 1 - What are containers ? Is it an image ? What do they do ? (5 min)
+### 1 - [What are containers ? Is it an image ? What do they do ? (5 min)](docs/1-containers-images.md)
 
-### 2 - Creating my first image recipe (2min)
+### 2 - [Creating my first image recipe (2min)](docs/234-first-image.md)
 
-### 3 - Building my first image (5 min)
+### 3 - [Building my first image (5 min)](docs/234-first-image.md)
 
-### 4 - Running my first container (5 min)
+### 4 - [Running my first container (5 min)](docs/2-3-4-first-image.md)
 
-### 5 - Launching VS Code in my container (5 min)
+### 5 - [Launching VS Code in my container (5 min)](docs/5-vscode-devcontainer.md)
 
-### 6 - Using scilus as a VS Code development backend (30 min)
+### 6 - [Using scilus as a VS Code development backend (30 min)](docs/6-scilus-dev-backend.md)

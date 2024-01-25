@@ -50,4 +50,38 @@ However, as you'll see, we'll go even further.
     ]
     ```
 
-8. Rebuild the devcontainer and open a terminal in VS Code. You can now see the volume in `/workshop_volume` and use it to store data.
+8. Rebuild the devcontainer and open a terminal in VS Code.
+
+    - You can now see the volume in `/workshop_volume` and use it to store data.
+    - A cool way to interact with the folder in VS Code is adding it to the workspace. In the top menu, click on `File > Add Folder to Workspace...` and select `/workshop_volume`.
+
+## Going even further
+
+We have everything *Scilpy*, but what if we want to run, let's say, *Nextflow* pipelines ?
+
+1. Add the following under features in the `devcontainer.json` file :
+
+    ```json
+    "ghcr.io/robsyme/features/nextflow:1": {}
+    ```
+
+2. Use mounts to bind to your input and output folders
+
+3. Add the following to the `devcontainer.json` file :
+
+    ```json
+    "mounts": [
+        {"source": "pipeline-x-input", "target": "/pipeline-x_input", "type": "volume"},
+        {"source": "pipeline-x-output", "target": "/pipeline-x_output", "type": "volume"}
+    ]
+    ```
+
+4. Rebuild the devcontainer to install nextflow and so the volumes get created by docker
+
+4. Place the datasets for input in the volume `pipeline-x-input` through the VS Code interface or using :
+
+    ```bash
+    docker cp <dataset> <vs-code-container-name>:/pipeline-x_input
+    ```
+
+5. Run your pipeline in VS Code using the terminal

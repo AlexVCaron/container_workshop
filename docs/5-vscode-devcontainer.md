@@ -45,6 +45,9 @@ A good thing to note : the `Dockerfile` is executed before everything else gets 
 
 2. In the Dockerfile :
     - On the first line, replace `FROM alpine:latest` with `FROM ubuntu:jammy-20230301`
-    - Replace calls to `apk add --no-cache` with `apt update && apt-get install -y`
+    - Remove the call to `apk add --no-cache bash`
+    - For the other calls, replace `apk add --no-cache` with `apt update && apt-get install -y`
 
 3. In the `devcontainer.json` file and replace `"image": ...` with `"build": { "dockerfile": "Dockerfile" }`
+
+4. Rebuild the devcontainer, open a terminal and launch `python3 /resources/print_infos_inside_container.py` in the terminal

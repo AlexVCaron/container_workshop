@@ -11,8 +11,6 @@ We will create a simple image that will run a python script. We will use the `al
     FROM alpine:latest
 
     RUN apk add --no-cache python3
-    RUN apk add --no-cache python3-dev
-    RUN apk add --no-cache py3-pip
     RUN apk add --no-cache bash
     RUN python3 -m venv /cool-workshop-venv
 
@@ -75,19 +73,19 @@ Without realizing we created our first container as well ! For now, when we exit
 
 3. The container is now alive and awaiting for you to interact with it. You can see it in the list of containers :
 
-```bash
-docker ps -a
-```
+    ```bash
+    docker ps -a
+    ```
 
 4. Reattach to the container :
 
-```bash
-docker exec -it my-first-container /bin/bash
-```
+    ```bash
+    docker exec -it my-first-container /bin/bash
+    ```
 
 4. Exit the container and remove it :
 
-```bash
-docker stop -s 9 my-first-container
-docker rm my-first-container
-```
+    ```bash
+    docker stop -s 9 my-first-container
+    docker rm my-first-container
+    ```

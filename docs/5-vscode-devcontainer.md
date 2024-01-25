@@ -43,11 +43,14 @@ A good thing to note : the `Dockerfile` is executed before everything else gets 
 
 1. Copy the Dockerfile, scripts and entrypoints created in the previous section to the `.devcontainer` folder
 
-2. In the Dockerfile :
+2. Reconstruct the entrypoint content so it aligns with step 1.3 of the [previous workshop section](2-3-4-first-image.md)
+
+3. In the Dockerfile :
     - On the first line, replace `FROM alpine:latest` with `FROM ubuntu:jammy-20230301`
     - Remove the call to `apk add --no-cache bash`
     - For the other calls, replace `apk add --no-cache` with `apt update && apt-get install -y`
+    - Add the line `RUN apt-get install -y python3-venv`
 
-3. In the `devcontainer.json` file and replace `"image": ...` with `"build": { "dockerfile": "Dockerfile" }`
+4. In the `devcontainer.json` file and replace `"image": ...` with `"build": { "dockerfile": "Dockerfile" }`
 
-4. Rebuild the devcontainer, open a terminal and launch `python3 /resources/print_infos_inside_container.py` in the terminal
+5. Rebuild the devcontainer, open a terminal and launch `python3 /resources/print_infos_inside_container.py` in the terminal
